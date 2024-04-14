@@ -13,16 +13,18 @@ Complete contents for assets/bromelia folder is here:
     - `--image-size`: ukuran imagenya mau sekian kali sekian (kalau isi 224, berarti 224 x 224)
     - `--run-num`: angka running. (1, 2, 3... etc.)
 
+    Script:
     ```
     python3 generator.py --dataset oxford_flowers102 --module-name resnet --model-name ResNet101 --image-size 224 --run-num 1
     ```
 
-2. distillation.py
+1. distillation.py
     - `--module-name`: preprocessing buat student modelnya.
     - `--student-model`: nama student model
     - `--teacher`: nama teacher (teacher harus ada dulu di folder generator/oxford_flowers102)
-    - `--run-num`: angka running. (1, 2, 3... etc.)
+    - `--run-num`: angka running. (1, 2, 3... etc.)  1
 
+    Script:
     ```
     python3 distillation.py --module-name mobilenet_v3 --student-model MobileNetV3Small --teacher ResNet101 --run-num 1
     ```
